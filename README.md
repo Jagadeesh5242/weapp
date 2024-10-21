@@ -50,7 +50,7 @@ The Weather Monitoring Project is a real-time data processing system that retrie
     export API_KEY='your_openweathermap_api_key'  # On macOS/Linux
     set API_KEY='your_openweathermap_api_key'  # On Windows
 
-#Running the Application
+# Running the Application
 1.Using Docker
 Build and run the application using Docker Compose:
 
@@ -65,7 +65,7 @@ Running Locally
 python app.py
 
 
-##Directory Structure
+## Directory Structure
 weather_monitoring_project/
 │
 ├── app/                     # Application source code
@@ -82,7 +82,7 @@ weather_monitoring_project/
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-###Acknowledgements
+### Acknowledgements
 OpenWeatherMap API
 Flask
 MongoDB
