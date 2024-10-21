@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      - API_KEY=9358ba2a4f81684a8b15a99a4708369a
+      - MONGO_URL='mongodb://mongo:27017/'
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
