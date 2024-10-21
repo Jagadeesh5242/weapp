@@ -1,25 +1,90 @@
-# Real-Time Weather Monitoring System
+# Weather Monitoring Project
 
-## Setup
+## Overview
 
-1. Clone the repository.
-2. Get an API key from OpenWeatherMap.
-3. Build and run the app with Docker Compose:
-    ```bash
-    docker-compose up --build
-    ```
+The Weather Monitoring Project is a real-time data processing system that retrieves weather data from the OpenWeatherMap API and provides summarized insights using rollups and aggregates. The system continuously monitors weather conditions for selected metros in India and stores the results in a MongoDB database.
 
-### API Key:
-Set the API key in the `docker-compose.yml` file or via environment variables.
+## Features
 
-## Dependencies:
-- Python 3.9
-- Docker
+- Real-time weather data retrieval for cities in India (Delhi, Mumbai, Chennai, Bangalore, Kolkata, Hyderabad).
+- Daily weather summaries with:
+  - Average temperature
+  - Maximum temperature
+  - Minimum temperature
+  - Dominant weather condition
+- User-configurable alerting thresholds for temperature and specific weather conditions.
+- Visualization of daily weather summaries and triggered alerts.
+
+## Technologies Used
+
+- **Flask**: For building the web application.
+- **MongoDB**: For storing weather data.
+- **Requests**: To call the OpenWeatherMap API.
+- **Docker**: For containerizing the application.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.9 or higher
 - MongoDB
-- OpenWeatherMap API
+- Docker (optional, if you want to run in a containerized environment)
+- OpenWeatherMap API Key (sign up at [OpenWeatherMap](https://openweathermap.org/) for a free API key)
 
-## Features:
-- Real-time data fetching from the OpenWeatherMap API.
-- Daily summaries (avg, min, max temps, dominant condition).
-- Alerting system based on user-defined thresholds.
-- Basic data visualization.
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Jagadeesh5242/weapp.git
+   cd weapp
+2. Create and activate a virtual environment:
+    python -m venv venv
+    source venv/bin/activate  # On macOS/Linux
+    venv\Scripts\activate  # On Windows
+    
+3. Install the required dependencies:
+   pip install -r requirements.txt
+   
+4. Set your OpenWeatherMap API key in the environment variable:
+    export API_KEY='your_openweathermap_api_key'  # On macOS/Linux
+    set API_KEY='your_openweathermap_api_key'  # On Windows
+
+#Running the Application
+1.Using Docker
+Build and run the application using Docker Compose:
+
+docker-compose up --build
+
+2.Access the application in your web browser:
+
+http://localhost:5000/weather/Delhi
+Running Locally
+3.Start the Flask application:
+
+python app.py
+
+
+##Directory Structure
+weather_monitoring_project/
+│
+├── app/                     # Application source code
+│   ├── __init__.py
+│   ├── app.py               # Main application file
+│   ├── weather_processor.py  # Weather processing logic
+│
+├── tests/                   # Test cases
+│   ├── test_temperature_conversion.py
+│
+├── requirements.txt         # Python dependencies
+├── docker-compose.yml       # Docker Compose configuration
+└── README.md                # Project documentation
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+###Acknowledgements
+OpenWeatherMap API
+Flask
+MongoDB
+Docker
+
