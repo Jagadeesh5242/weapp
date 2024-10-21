@@ -60,31 +60,17 @@ docker-compose up --build
 
 http://localhost:5000/weather/Delhi
 Running Locally
-3.Start the Flask application:
 
+3.Start the Flask application:
 python app.py
 
-
-## Directory Structure
-weather_monitoring_project/
-│
-├── app/                     # Application source code
-│   ├── __init__.py
-│   ├── app.py               # Main application file
-│   ├── weather_processor.py  # Weather processing logic
-│
-├── tests/                   # Test cases
-│   ├── test_temperature_conversion.py
-│
-├── requirements.txt         # Python dependencies
-├── docker-compose.yml       # Docker Compose configuration
-└── README.md                # Project documentation
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ### Acknowledgements
-OpenWeatherMap API
-Flask
-MongoDB
-Docker
+
+1.OpenWeatherMap API
+
+2.Flask
+
+3.MongoDB
+
+4.Docker
 
